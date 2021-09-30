@@ -1,0 +1,120 @@
+{% extends "base.html" %}
+{% load static %}
+
+{%block content%}  
+
+<section id="events" class="events"  style="padding-top: 10%;">
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <h2>Events</h2>
+      <p>Organize Your Events in our Restaurant</p>
+    </div>
+
+    <div class="events-slider swiper-container" data-aos="fade-up" data-aos-delay="100">
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-birthday.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Birthday Parties</h3>
+              <div class="price">
+                <p><span>189Rs</span></p>
+              </div>
+              <p class="fst-italic">
+                In our restaurant their is a ample space to Celebrate the Birthdays.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> Hourly Charges to Celebrate.</li>
+                <li><i class="bi bi-check-circled"></i> Decorations is customised</li>
+                <li><i class="bi bi-check-circled"></i> Other food Items is also available.</li>
+              </ul>
+              <p>
+                You can bring your friends family we have a healthy atmosphere in our restaurant.
+              </p>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-private.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Private Parties</h3>
+              <div class="price">
+                <p><span>290</span></p>
+              </div>
+              <p class="fst-italic">
+                we have also space for private Meetings.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> A peaceful environment for meeting.</li>
+                <li><i class="bi bi-check-circled"></i> Business meetingcan also be arranged.</li>
+                <li><i class="bi bi-check-circled"></i> Required facility provided.</li>
+              </ul>
+              <p>
+                You can arrange private meetings or any business meeting over our restaurant we have a space for personal meeting.
+              </p>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+        <div class="swiper-slide">
+          <div class="row event-item">
+            <div class="col-lg-6">
+              <img src="{% static 'img/event-custom.jpg' %}" class="img-fluid" alt="">
+            </div>
+            <div class="col-lg-6 pt-4 pt-lg-0 content">
+              <h3>Custom Parties</h3>
+              <div class="price">
+                <p><span>99</span></p>
+              </div>
+              <p class="fst-italic">
+                We also celebrate Other events like engagements, name ceremony etc.
+              </p>
+              <ul>
+                <li><i class="bi bi-check-circled"></i> we have a room of 100-500 people.</li>
+                <li><i class="bi bi-check-circled"></i> You can arrange engagement,name ceremony etc.</li>
+                <li><i class="bi bi-check-circled"></i> The requirement of food and decoration will also be on us.</li>
+              </ul>
+              <p>
+                A small celebration can also be celebrated in our restaturant.
+              </p>
+            </div>
+          </div>
+        </div><!-- End testimonial item -->
+
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+  </div>
+</section><!-- End Events Section -->
+  
+
+  <!--<form action ="{% url 'Event'%}" method ="POST">
+    {% csrf_token %}
+  
+    <input type="text" name="name" placeholder="Your Name" >
+                        
+    <input type="text" name="phone" placeholder="Your Phone" >
+
+    <input type="date" name="date" placeholder="Date">
+
+    <input type="text" name="event" placeholder="Event"><br>
+                        
+
+                       
+    <input type="number" name="persons" placeholder="no of people">
+                        
+    
+                      
+    <br>
+    <input type="submit" value="BOOK Hall"></div>-->
+
+  {% endblock %}

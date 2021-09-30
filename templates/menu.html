@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}  
+
+ <!-- ======= Menu Section ======= -->
+ <section id="menu" class="menu section-bg" style="padding-top: 10%";>
+  <div class="container" data-aos="fade-up">
+
+    <div class="section-title">
+      <p>Check Our Tasty Menu</p>
+    </div>
+
+    <div class="row" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-lg-12 d-flex justify-content-center">
+        <ul id="menu-flters">
+          <li data-filter="*" class="filter-active">All</li>
+          <li data-filter=".filter-starters">Starters</li>
+          <li data-filter=".filter-salads">Salads</li>
+          <li data-filter=".filter-specialty">Specialty</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="row menu-container" data-aos="fade-up" data-aos-delay="200">
+
+      {% for starter in starters%}
+      <div class="col-lg-6 menu-item filter-starters">
+        {% if starter.offer %}
+        <div class="spec_offer text-center"><a href="#"><h6>Special offer</h6></a></div>
+        {% endif %}
+        <img src="{{starter.img.url}}" class="menu-img" alt="">
+        
+        <div class="menu-content">
+          <a href="#">{{starter.name}}</a><span>{{starter.price}}$</span>
+          
+        </div>
+        <div class="menu-ingredients">
+          {{starter.desc}}
+        </div>
+      </div>
+      {% endfor %}
+
+      {% for salad in salads%}
+      <div class="col-lg-6 menu-item filter-salads">
+        <img src="{{salad.img.url}}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">{{salad.name}}</a><span>{{salad.price}}$</span>
+        </div>
+        <div class="menu-ingredients">
+          {{salad.desc}}
+        </div>
+      </div>
+      {% endfor %}
+
+
+      {% for specialty in specialtys%}
+      <div class="col-lg-6 menu-item filter-specialty">
+        <img src="{{specialty.img.url}}" class="menu-img" alt="">
+        <div class="menu-content">
+          <a href="#">{{specialty.name}}</a><span>{{specialty.price}}$</span>
+        </div>
+        <div class="menu-ingredients">
+          {{specialty.desc}}
+        </div>
+      </div>
+      {% endfor %}
+
+    </div>
+
+  </div>
+</section>  <!-- End Menu Section -->
+
+  {% endblock %} 
